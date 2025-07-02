@@ -1,11 +1,15 @@
+# test_app.py
+
 import unittest
-from app import add
+from app import reverse_string
 
 class TestApp(unittest.TestCase):
-    def test_add(self):
-        self.assertEqual(add(2, 3), 5)
-        self.assertEqual(add(-1, 1), 0)
-        self.assertEqual(add(0, 0), 0)
+    def test_reverse_string(self):
+        self.assertEqual(reverse_string("hello"), "olleh")
+        self.assertEqual(reverse_string(""), "")
+        self.assertEqual(reverse_string("a"), "a")
+        self.assertEqual(reverse_string("12345"), "54321")
+        self.assertNotEqual(reverse_string("abc"), "abc")  # to ensure it's not unchanged
 
 if __name__ == '__main__':
     unittest.main()
