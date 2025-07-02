@@ -1,5 +1,7 @@
-def add(a, b):
-    return a + b
+# app.py
+
+def reverse_string(s):
+    return s[::-1]
 
 if __name__ == "__main__":
-    print("5 + 3 =", add(5, 3))
+    print("Reversed 'hello' =", reverse_string("hello"))
